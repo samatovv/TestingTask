@@ -18,7 +18,7 @@ export const Contact = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-[100%] md:w-[40%] mt-[20%] flex flex-col gap-[100px]"
+            className="w-[100%] md:w-[40%] mt-[20%] flex flex-col gap-[60px]"
         >
             <motion.p
                 initial={{ opacity: 0 }}
