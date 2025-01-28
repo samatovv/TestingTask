@@ -7,7 +7,7 @@ export const Recommendation = () => {
     return (
         <div className="mt-20 bg-[#F4F4F4] py-10">
             <Container>
-                    <p className="text-[16px]md:text-[18px] text-[#93A27C]">Вам могут понравиться</p>
+                    <p className="text-[16px] md:text-[18px] text-[#93A27C]">Вам могут понравиться</p>
                     <div>
                         <div className="flex justify-between items-center">
                             <p className="text-[28px] md:text-[56px] font-bold">Рекомендуемые товары</p>

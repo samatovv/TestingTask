@@ -50,7 +50,7 @@ export const RecProducts = () => {
                     <div key={item.id} className="p-5 rounded-3xl w-[100%] h-[420px] bg-white flex flex-col justify-between">
                         <img src={item.image} alt="" className="w-full h-[170px] lg:h-[205px] object-cover rounded-xl" />
                         <div className="flex flex-col gap-4">
-                            <p className="font-semibold mt-3 text-[16px]">{item.title}</p>
+                            <p className="font-semibold mt-3 text-[13px]">{item.title}</p>
                             <span className="text-[12px] font-normal text-gray-500">вес: {item.weight} кг</span>
                         </div>
                         <div className="flex justify-between items-center">
