@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+* {
+    --sb-track-color: transparent;
+    --sb-thumb-color: #93A27C;
+    --sb-size: 5px; 
+  }
+  
+  *::-webkit-scrollbar {
+    width: var(--sb-size);
+    height: var(--sb-size);
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 0px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 20px;
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+      scrollbar-width: thin;
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee-reverse {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    animation: marquee 40s linear infinite;
+    will-change: transform;
+}
+
+.animate-marquee-reverse {
+    display: flex;
+    animation: marquee-reverse 40s linear infinite;
+    will-change: transform;
+}
