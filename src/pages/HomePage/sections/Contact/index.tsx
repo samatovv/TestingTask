@@ -36,7 +36,7 @@ export const Contact = () => {
             >
                 <motion.input
                     whileFocus={{ scale: 1.05 }}
-                    className="w-[100%] md:w-[50%] bg-white outline-none rounded-[20px] px-4 py-4 md:py-2"
+                    className="w-[100%] md:w-[50%] bg-white outline-none rounded-[20px] px-4 h-[45px] md:py-2"
                     type="text"
                     placeholder="Найти..."
                 />
@@ -44,7 +44,7 @@ export const Contact = () => {
                     onClick={handleAddToCart}
                     whileHover={{ scale: 1.03, backgroundColor: "#d7d5d5" }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex justify-between items-center w-[100%] md:w-[43%] bg-white rounded-[20px] p-1 cursor-pointer transition-all duration-300"
+                    className="flex justify-between items-center w-[100%] md:w-[43%] bg-white rounded-[20px] px-1 h-[45px] cursor-pointer transition-all duration-300"
                 >
                     <p className="ml-3">Заказать звонок</p>
                     <motion.img
