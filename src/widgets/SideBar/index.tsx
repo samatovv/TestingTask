@@ -1,6 +1,7 @@
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export const SideBar = ({
     toggleSidebar,
@@ -11,8 +12,27 @@ export const SideBar = ({
     isOpen: boolean;
     isActive: (path: string) => boolean;
 }) => {
+    const sidebarRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+                toggleSidebar();
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isOpen, toggleSidebar]);
+
     return (
         <motion.div
+            ref={sidebarRef}
             initial={{ x: "-100%", opacity: 0 }}
             animate={isOpen ? { x: 0, opacity: 1 } : { x: "-100%", opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
