@@ -47,13 +47,13 @@ export const RecProducts = () => {
         <div>
             <div className="grid grid-cols-4 gap-3 lg:gap-14">
                 {currentItems.map((item) => (
-                    <div key={item.id} className="p-5 rounded-2xl w-[100%] h-[420px] bg-white">
+                    <div key={item.id} className="p-5 rounded-3xl w-[100%] h-[420px] bg-white flex flex-col justify-between">
                         <img src={item.image} alt="" className="w-full h-[170px] lg:h-[205px] object-cover rounded-xl" />
                         <div className="flex flex-col gap-4">
                             <p className="font-semibold mt-3 text-[16px]">{item.title}</p>
                             <span className="text-[12px] font-normal text-gray-500">вес: {item.weight} кг</span>
                         </div>
-                        <div className="flex justify-between items-center mt-4">
+                        <div className="flex justify-between items-center">
                             <p className="text-[20px] font-bold">{item.price} c</p>
                             <div className="border border-[#F0F0F0] rounded-3xl flex justify-between items-center gap-3 p-1">
                                 <div
